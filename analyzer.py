@@ -1,5 +1,10 @@
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 #imports SentimentIntensityAnalyzer from the VADER module of Natural Language Toolkit
+try:
+    nltk.data.find('sentiment/vader_lexicon.zip')
+except LookupError:
+    nltk.download('vader_lexicon')
+#ensures the lexicon is downloaded automatically on the first run
 def analyse(statement):
     sid = SentimentIntensityAnalyzer()
     scores = sid.polarity_scores(statement)
