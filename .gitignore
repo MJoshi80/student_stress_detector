@@ -1,1 +1,16 @@
+# Python bytecode (compiled files)
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Project-specific data 
+# We ignore this because it contains personal logs
 entries.json
+
+# OS-specific files
+.DS_Store
+Thumbs.db
